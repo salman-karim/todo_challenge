@@ -25,7 +25,7 @@ describe("ToDoListController", function() {
   describe('viewing list', function() {
 
     it('displays list of tasks', function() {
-      expect(ctrl.taskList).toEqual(tasks);
+      expect(ctrl.taskList.tasks).toEqual(tasks);
     });
   });
 
@@ -34,7 +34,7 @@ describe("ToDoListController", function() {
     it('displays list of tasks', function() {
       ctrl.newTask = "Do the dishes";
       ctrl.addTask();
-      expect(ctrl.taskList).toContain({'task': 'Do the dishes'});
+      expect(ctrl.taskList.tasks).toContain({'task': 'Do the dishes'});
     });
   });
 
