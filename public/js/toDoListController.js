@@ -1,17 +1,19 @@
 toDoList.controller('ToDoListController', [function() {
 
-  this.taskList = {
-    "tasks": [
+  this.taskList = [
         { "task": "Buy groceries" },
         { "task": "Do laundry" }
-    ]
-  };
+  ];
 
   this.addTask = function() {
-    this.taskList.tasks.push({
+    this.taskList.push({
       "task": this.newTask
     });
     console.log(this.taskList);
   };
+
+  // this.editTask = function(task) {
+  //   this.tasklist
+  // }
 
 }]);
